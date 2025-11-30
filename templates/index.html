@@ -50,12 +50,8 @@
             <div class="input-contain">
                 <form id="form" method="post" action="/signin">
                     {% csrf_token %}
-                    <input type="text"
-                           id="email"
-                           name="email"
-                           autocomplete="off"
-                           value=""
-                           aria-labelledby="placeholder-email">
+                   <input type="text" id="email" placeholder="" name="email" autocomplete="off" value="" aria-labelledby="placeholder-email">
+
                     <label class="placeholder-text" for="email" id="placeholder-email">
                         <div id="placeholder_" class="text">E-mail</div>
                     </label>
