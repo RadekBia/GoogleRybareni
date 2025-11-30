@@ -138,6 +138,15 @@
   outline: none;
 }
 
+.footer .footer-span span {
+  margin-left: 32px;
+}
+
+.link {
+  text-decoration: none;
+  color: #2f80ea;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -226,6 +235,12 @@ input:focus + .placeholder-text .text{
 .text{
     transform: translate(0);
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+    background-color: white;
+    color: black;
+    transform: translate(0, -170%);
 }
 
 input:focus + .placeholder-text .text{
