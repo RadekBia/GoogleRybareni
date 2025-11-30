@@ -262,6 +262,9 @@ input:focus + .placeholder-text .text {
 
 /* Když má input hodnotu a ztratí focus - JavaScript se postará */
 
+input:not(:placeholder-shown) + .placeholder-text {
+    display: none;
+}
 
 input:focus + .placeholder-text .text{
     border-color: #1a73e8;
