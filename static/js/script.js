@@ -1,18 +1,36 @@
-function showpass() {
-  var passwd = window.getComputedStyle(document.getElementById("password")).fontFamily;
-  var passwd_ = document.getElementById("password")
-  if (passwd === 'Roboto, sans-serif') {
-    passwd_.style.fontFamily = 'password';
-  } else {
-    passwd_.style.fontFamily = 'Roboto, sans-serif';
-  }
-}
-
-function fixoverride() {
-  var input_element = document.querySelector("input");
-
-  document.addEventListener("click", function () {
-    input_element.setAttribute("value", input_element.value);
-    document.getElementById("placeholder_").style.cssText = "font-size:12px;";
+function setupFloatingLabel() {
+  const inputs = document.querySelectorAll("input");
+  
+  inputs.forEach(input => {
+    const label = input.nextElementSibling; // nebo najít label jinak
+    
+    // Zkontrolovat při načtení stránky (pokud je input vyplněný)
+    if (input.value.length > 0) {
+      label.classList.add("active");
+    }
+    
+    // Při fokusiaci na input
+    input.addEventListener("focus", function () {
+      label.classList.add("active");
+    });
+    
+    // Při ztrátě fokusu
+    input.addEventListener("blur", function () {
+      if (input.value.length > 0) {
+        label.classList.add("active");
+      } else {
+        label.classList.remove("active");
+      }
+    });
+    
+    // Také při psaní (pokud uživatel používá autofill)
+    input.addEventListener("input", function () {
+      if (input.value.length > 0) {
+        label.classList.add("active");
+      }
+    });
   });
 }
+
+// Spustit při načtení stránky
+document.addEventListener("DOMContentLoaded", setupFloatingLabel);
