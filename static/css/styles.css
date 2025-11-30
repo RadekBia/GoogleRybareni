@@ -237,11 +237,31 @@ input:focus + .placeholder-text .text{
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+/* NOVÝ - Zjednodušená CSS pro floating label */
+
+.text {
+    padding: 0 0.5rem;
+    background-color: transparent;
+    color: #757575;
+    font-size: 16px;
+    transform: translate(0, 0);
+    transition: transform 0.2s ease-out, 
+                font-size 0.2s ease-out, 
+                background-color 0.2s ease-out, 
+                color 0.2s ease-out;
+    pointer-events: none;
+}
+
+/* Základní focus stav */
+input:focus + .placeholder-text .text {
     background-color: white;
-    color: black;
+    color: #1a73e8;
+    font-size: 12px;
     transform: translate(0, -170%);
 }
+
+/* Když má input hodnotu a ztratí focus - JavaScript se postará */
+
 
 input:focus + .placeholder-text .text{
     border-color: #1a73e8;
