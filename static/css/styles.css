@@ -237,15 +237,10 @@ input:focus + .placeholder-text .text{
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-.placeholder-text .text {
-  transform: translate(0, 0);
-}
-
-.filled + .placeholder-text .text {
-  transform: translate(0, -170%);
-  background-color: white;
-  color: black;
-
+input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+    background-color: white;
+    color: black;
+    transform: translate(0, -170%);
 }
 
 input:focus + .placeholder-text .text{
