@@ -226,7 +226,7 @@ input:focus + .placeholder-text .text{
     background-color: white;
     color: black;
     font-size: 12px;
-    margin-top: -10px;
+    margin-top: -8px;
     transform: translate(0, -170%);
     border-color: #1a73e8;
     color: #1a73e8;
@@ -237,17 +237,10 @@ input:focus + .placeholder-text .text{
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-input:focus + .placeholder-text .text, 
-input:valid + .placeholder-text .text {
+input:focus + .placeholder-text .text, input:not(:placeholder-shown) + .placeholder-text .text {
     background-color: white;
     color: black;
     transform: translate(0, -170%);
-}
-
-}
-
-input:not(:placeholder-shown) + .placeholder-text {
-    display: none;
 }
 
 input:focus + .placeholder-text .text{
