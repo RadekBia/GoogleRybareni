@@ -226,7 +226,7 @@ input:focus + .placeholder-text .text{
     background-color: white;
     color: black;
     font-size: 12px;
-    margin-top: -8px;
+    margin-top: -10px;
     transform: translate(0, -170%);
     border-color: #1a73e8;
     color: #1a73e8;
@@ -237,16 +237,13 @@ input:focus + .placeholder-text .text{
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-.placeholder-text .text {
-    transition: all 0.3s ease;
-}
-
 input:focus + .placeholder-text .text, 
-input.has-value + .placeholder-text .text {
+input:valid + .placeholder-text .text {
     background-color: white;
     color: black;
     transform: translate(0, -170%);
-  
+}
+
 }
 
 input:not(:placeholder-shown) + .placeholder-text {
